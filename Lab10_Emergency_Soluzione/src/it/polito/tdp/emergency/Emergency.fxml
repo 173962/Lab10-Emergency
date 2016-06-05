@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.emergency.EmergencyController" -->
+<StackPane id="StackPane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0"
+	prefWidth="578.0000999999975" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/8" fx:controller="it.polito.tdp.emergency.EmergencyController">
+	<children>
+		<VBox prefHeight="200.0" prefWidth="100.0">
+			<children>
+				<AnchorPane minHeight="100.0" prefHeight="151.0"
+					prefWidth="579.0">
+					<children>
+						<Label layoutX="14.0" layoutY="37.0" prefHeight="36.0"
+							prefWidth="46.0" text="Nome:" />
+						<TextField fx:id="txt_dottore" layoutX="72.0" layoutY="44.0"
+							prefWidth="200.0" />
+						<Label layoutX="287.0" layoutY="44.0" prefHeight="22.0"
+							prefWidth="81.0" text="sfasamento:" />
+						<Label fx:id="lbl_add" layoutX="237.0" layoutY="121.0"
+							prefWidth="96.0" text="" />
+						<TextField fx:id="txt_sfasamento" layoutX="365.0"
+							layoutY="44.0" prefWidth="96.0" />
+						<Button id="btn_add" fx:id="btn_aggiungi" layoutX="486.0"
+							layoutY="45.0" mnemonicParsing="false" onAction="#aggiungiDottore"
+							text="aggiungi" />
+						<RadioButton id="radio_tipo" fx:id="radio_dottore"
+							layoutX="187.0" layoutY="83.0" mnemonicParsing="false" selected="true"
+							text="Dottore">
+							<toggleGroup>
+								<ToggleGroup fx:id="tipo" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="radio_assistente" layoutX="299.0"
+							layoutY="83.0" mnemonicParsing="false" text="Assistente"
+							toggleGroup="$tipo" />
+						<Label layoutX="229.0" layoutY="14.0" prefHeight="28.0"
+							prefWidth="140.0" text="Emergency" textFill="#f80707">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+					</children>
+				</AnchorPane>
+				<AnchorPane prefHeight="52.0" prefWidth="579.0">
+					<children>
+						<Button fx:id="btn_start" layoutX="245.0" layoutY="14.0"
+							mnemonicParsing="false" onAction="#startSimulation" prefHeight="29.0"
+							prefWidth="88.0" text="Start" />
+					</children>
+				</AnchorPane>
+				<AnchorPane prefHeight="329.0" prefWidth="579.0">
+					<children>
+						<TextArea fx:id="txt_output" layoutX="86.0" layoutY="14.0"
+							prefHeight="281.9998779296875" prefWidth="416.0" wrapText="true" />
+					</children>
+				</AnchorPane>
+			</children>
+		</VBox>
+	</children>
+</StackPane>
